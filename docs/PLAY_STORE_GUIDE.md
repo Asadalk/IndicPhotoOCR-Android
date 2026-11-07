@@ -41,7 +41,7 @@ What a personal account means:
 - **Source link** in the app: `https://github.com/Asadalk/IndicPhotoOCR-Android`.
 
 **Still to do:**
-1. **Push the source** to `https://github.com/Asadalk/IndicPhotoOCR-Android` with the AGPL-3.0 `LICENSE` (see `LICENCE_AUDIT.md`, plan step 1).
+1. ~~Push the source~~: done, public at `https://github.com/Asadalk/IndicPhotoOCR-Android`. Push each new release's source there too.
 2. **Upload key + Play App Signing.** Make the key on the machine that will do releases:
    `keytool -genkeypair -v -keystore upload.jks -keyalg RSA -keysize 4096 -validity 10000 -alias upload`
    - Keep `upload.jks` and its password safe, never commit them, and keep a backup.
@@ -118,11 +118,11 @@ What is left:
 
 ## 8. Checklist before pressing "Publish"
 
-- [ ] Source pushed to `Asadalk/IndicPhotoOCR-Android` with the AGPL-3.0 `LICENSE` (the only RED item in `LICENCE_AUDIT.md`)
+- [x] Source public at `Asadalk/IndicPhotoOCR-Android` with the AGPL-3.0 `LICENSE` (7 Nov 2026)
 - [x] Logos removed, "Supported by Bhashini" text only (7.5)
 - [x] Detector starting checkpoint source and licence confirmed (RoyRud1902/yolo11n-text, Apache-2.0)
 - [x] MIST use cleared by sir
-- [x] Open-source licences screen, real Terms and Privacy text in the app; [ ] the same privacy text hosted at a public URL (GitHub Pages)
+- [x] Open-source licences screen, real Terms and Privacy text in the app; privacy page `docs/privacy.html` pushed; [ ] GitHub Pages switched on → URL https://asadalk.github.io/IndicPhotoOCR-Android/privacy.html
 - [x] Final app ID `io.github.asadalk.indicphotoocr` (7.5)
 - [x] .aab with install-time model pack, targetSdk 36; [ ] signed with the upload key
 - [ ] Personal developer account created and verified
