@@ -1,0 +1,14 @@
+# IndicPhotoOCR 2.0 app: test builds
+
+| Build | Date | Changes |
+|---|---|---|
+| test3 (alpha3) | 2026-10-29 | New look: header, cards, Camera/Gallery buttons, IIT Jodhpur + Bhashini logos |
+| test4 (alpha4) | 2026-10-29 | All 12 languages (int8 readers); models memory-mapped from the APK |
+| test5 (alpha5) | 2026-10-30 | Overlap pruning; models load when the app opens + warm-up; one colour per language |
+| test6 (alpha6) | 2026-10-30 | English phrase boxes pruned |
+| test7 (alpha7) | 2026-10-30 | Pruning D1 + D2 (D3 built but too slow, not shipped) |
+| test7.1 (alpha7.1) | 2026-11-05 | Side menu (About / Terms / Privacy); live image stages; one progress bar; no timings; arm64 + Android 8+; GPU/NPU with CPU fallback |
+| test7.2 (alpha7.2) | 2026-11-05 | Side menu below the status bar; header strips in the exact logo colours |
+| **test7.3 (alpha7.3)** | 2026-11-07 | **No colour coding**: all boxes white, recognised text in one colour, language legend removed, progress label "Analysing text" instead of "Identifying languages". **New app icon** (viewfinder with अ / A, adaptive icon) + Play Store icon and feature graphic. **ONNX Runtime 1.20.0 → 1.22.0** (16 KB page-size aligned native libraries, required by Google Play). |
+| **test7.4 (alpha7.4)** | 2026-11-07 | **Play-ready build**: models moved to an install-time asset pack (`:model_pack`; Play download base ~14 MB + pack ~335 MB); **targetSdk/compileSdk 36** (AGP 8.11.2, Gradle 8.13); output is an **.aab** + a universal test APK (bundletool). New side-menu page **Open-source licences** (NOTICE + full AGPL/MIT/BSD/Apache texts). **Real Terms of Service and Privacy Policy** text. About Us: version/"Running on" line removed. **Round icon fixed**: adaptive foreground scaled 0.8 so the viewfinder fits the circle mask (Pixel). Model loading falls back to an in-memory read if a model is ever stored compressed. |
+| **test7.5 (alpha7.5)** | 2026-11-07 | **Personal-account release prep** (sir: personal Play account, no logos, "Supported by Bhashini" is fine). IIT Jodhpur and Bhashini **logos removed** (main footer, About Us, side-menu header; PNGs deleted); footer text "Created at VL2G, IIT Jodhpur · Supported by Bhashini"; side-menu header and About Us show the IndicPhotoOCR logo. About/Terms/Privacy: "created by people at VL2G, IIT Jodhpur"; Terms liability now "the developers and contributors", item 7 says neither IIT Jodhpur nor Bhashini publishes the app. **Permanent app ID `io.github.asadalk.indicphotoocr`** (installs as a new app; uninstall older test builds). Source link → `github.com/Asadalk/IndicPhotoOCR-Android`. Detector start-weights credit (yolo11n-text, Apache-2.0) in Open-source licences. versionCode 12. |
