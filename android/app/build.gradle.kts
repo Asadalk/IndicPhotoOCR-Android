@@ -10,8 +10,8 @@ android {
         applicationId = "com.vl2g.indicphotoocr"  // permanent Play ID (sir, 9 Nov 2026); code package stays com.iitj...
         minSdk = 26          // Android 8.0+ (7.x and older: ~2% of active devices, Dec 2025)
         targetSdk = 36           // Google Play: new apps and updates must target API 36 from 31 Aug 2026
-        versionCode = 12
-        versionName = "2.0.0-alpha7.5"
+        versionCode = 13
+        versionName = "2.0.0-alpha7.6"
         // 64-bit ARM phones only: x86_64 is for emulators, and 32-bit-only phones (Android Go, 1-2 GB RAM) cannot hold the models
         ndk { abiFilters += listOf("arm64-v8a") }
         // overlap pruning: -PpruneMode=d12 (default) or d123 (adds D3 re-reads; installs next to the d12 app)

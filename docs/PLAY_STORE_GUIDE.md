@@ -123,7 +123,7 @@ What is left:
 - [x] Detector starting checkpoint source and licence confirmed (RoyRud1902/yolo11n-text, Apache-2.0)
 - [x] MIST use cleared by sir
 - [x] Open-source licences screen, real Terms and Privacy text in the app; privacy page `docs/privacy.html` pushed; [ ] GitHub Pages switched on → URL https://asadalk.github.io/IndicPhotoOCR-Android/privacy.html
-- [x] Final app ID `com.vl2g.indicphotoocr` (source updated 9 Nov 2026; first build with it is the next one)
+- [x] Final app ID `com.vl2g.indicphotoocr` (first build with it: 7.6)
 - [x] .aab with install-time model pack, targetSdk 36; [ ] signed with the upload key
 - [ ] Personal developer account created and verified
 - [ ] Closed test: 12+ testers for 14 days, on different phones (low-end too); then production access
