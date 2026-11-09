@@ -36,7 +36,7 @@ What a personal account means:
 - **Target API 36 (Android 16):** compileSdk/targetSdk 36, AGP 8.11.2, Gradle 8.13.
 - **16 KB page-size support:** ONNX Runtime 1.22.0.
 - **Terms of Service, Privacy Policy and Open-source licences** screens with real text.
-- **App ID (permanent): `io.github.asadalk.indicphotoocr`** (7.5). Because the ID changed, 7.5 installs as a new app next to older test builds; uninstall those.
+- **App ID (permanent): `com.vl2g.indicphotoocr`** (sir, 9 Nov 2026; replaces 7.5's `io.github.asadalk.indicphotoocr`). Each ID change installs as a new app next to older test builds; uninstall those. Never change it after the first Play upload.
 - **No logos**; credit line "Created at VL2G, IIT Jodhpur · Supported by Bhashini" (7.5).
 - **Source link** in the app: `https://github.com/Asadalk/IndicPhotoOCR-Android`.
 
@@ -123,7 +123,7 @@ What is left:
 - [x] Detector starting checkpoint source and licence confirmed (RoyRud1902/yolo11n-text, Apache-2.0)
 - [x] MIST use cleared by sir
 - [x] Open-source licences screen, real Terms and Privacy text in the app; privacy page `docs/privacy.html` pushed; [ ] GitHub Pages switched on → URL https://asadalk.github.io/IndicPhotoOCR-Android/privacy.html
-- [x] Final app ID `io.github.asadalk.indicphotoocr` (7.5)
+- [x] Final app ID `com.vl2g.indicphotoocr` (source updated 9 Nov 2026; first build with it is the next one)
 - [x] .aab with install-time model pack, targetSdk 36; [ ] signed with the upload key
 - [ ] Personal developer account created and verified
 - [ ] Closed test: 12+ testers for 14 days, on different phones (low-end too); then production access

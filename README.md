@@ -115,7 +115,7 @@ Accuracy of this exact pipeline (BSTD, official metric, average of 10 languages,
 | Change the app logo / credit line | `res/drawable-nodpi/logo_indicphotoocr.png`; credit text = `strings.xml → credit_line, supported_by` (no institute/Bhashini logos, by decision) |
 | Change detection threshold / NMS | `model_pack/src/main/assets/models/manifest.json → yolo.conf / yolo.iou` |
 | Change pruning | `OcrEngine.kt → prune / pruneD12 / pruneD3`; keep `tools/dedup_boxes.py` in sync |
-| App ID (permanent on Play) | `app/build.gradle.kts → applicationId` = `io.github.asadalk.indicphotoocr`; do not change after the first upload |
+| App ID (permanent on Play) | `app/build.gradle.kts → applicationId` = `com.vl2g.indicphotoocr`; do not change after the first upload |
 | **Make a new version** | `app/build.gradle.kts`: raise `versionCode` by 1 and set `versionName` |
 | App name on the home screen | `app/build.gradle.kts → manifestPlaceholders["appLabel"]` |
 

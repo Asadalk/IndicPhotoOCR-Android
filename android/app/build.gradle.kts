@@ -7,7 +7,7 @@ android {
     namespace = "com.iitj.indicphotoocr.app"
     compileSdk = 36
     defaultConfig {
-        applicationId = "io.github.asadalk.indicphotoocr"  // permanent Play ID (personal account); code package stays com.iitj...
+        applicationId = "com.vl2g.indicphotoocr"  // permanent Play ID (sir, 9 Nov 2026); code package stays com.iitj...
         minSdk = 26          // Android 8.0+ (7.x and older: ~2% of active devices, Dec 2025)
         targetSdk = 36           // Google Play: new apps and updates must target API 36 from 31 Aug 2026
         versionCode = 12
