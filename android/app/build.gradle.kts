@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -10,8 +12,8 @@ android {
         applicationId = "com.vl2g.indicphotoocr"  // permanent Play ID (sir, 9 Nov 2026); code package stays com.iitj...
         minSdk = 26          // Android 8.0+ (7.x and older: ~2% of active devices, Dec 2025)
         targetSdk = 36           // Google Play: new apps and updates must target API 36 from 31 Aug 2026
-        versionCode = 13
-        versionName = "2.0.0-alpha7.6"
+        versionCode = 14
+        versionName = "2.0.0"
         // 64-bit ARM phones only: x86_64 is for emulators, and 32-bit-only phones (Android Go, 1-2 GB RAM) cannot hold the models
         ndk { abiFilters += listOf("arm64-v8a") }
         // overlap pruning: -PpruneMode=d12 (default) or d123 (adds D3 re-reads; installs next to the d12 app)
@@ -20,10 +22,23 @@ android {
         if (pruneMode == "d123") applicationIdSuffix = ".d3"
         manifestPlaceholders["appLabel"] = if (pruneMode == "d123") "IndicPhotoOCR 2.0 D3" else "IndicPhotoOCR 2.0"
     }
+    // Play upload key: read from ~/.indicphotoocr-signing.properties (storeFile, storePassword, keyAlias, keyPassword),
+    // or the file named by INDICPHOTOOCR_SIGNING. The key and password never go into Git. Without the file, release
+    // builds are signed with the debug key (fine for sideloading, rejected by Google Play).
+    val signingFile = file(System.getenv("INDICPHOTOOCR_SIGNING") ?: "${System.getProperty("user.home")}/.indicphotoocr-signing.properties")
+    val uploadSigning = if (signingFile.isFile) Properties().apply { signingFile.inputStream().use { load(it) } } else null
+    signingConfigs {
+        if (uploadSigning != null) create("upload") {
+            storeFile = file(uploadSigning.getProperty("storeFile"))
+            storePassword = uploadSigning.getProperty("storePassword")
+            keyAlias = uploadSigning.getProperty("keyAlias")
+            keyPassword = uploadSigning.getProperty("keyPassword")
+        }
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("debug")  // test builds; real release key later
+            signingConfig = signingConfigs.getByName(if (uploadSigning != null) "upload" else "debug")
         }
     }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
