@@ -52,7 +52,7 @@ What a personal account means:
 ## 4. Create the app in Play Console
 
 Play Console → **Create app**:
-- App name: `IndicPhotoOCR` (max 30 characters)
+- App name: `IndicPhotoOCR 2.0` (17 of max 30 characters; same as the name under the app icon)
 - Default language: English (India)
 - App, Free
 - Accept the declarations
