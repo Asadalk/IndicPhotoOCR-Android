@@ -142,10 +142,13 @@ def render_png(size, out, feature=False):
                stroke_width=int(0.4 * k) if font == DEVA else 0, stroke_fill=col)
     d.rectangle([ox + x0 * k, oy + (base + 5) * k, ox + (x0 + total) * k, oy + (base + 8) * k], fill=GREEN)
     if feature:
+        title = "IndicPhotoOCR 2.0"
         f1 = ImageFont.truetype(LATN, 56 * S)
+        while d.textlength(title, font=f1) > W - (ox + 100 * k + 10 * S) - 48 * S:  # keep a right margin
+            f1 = ImageFont.truetype(LATN, f1.size - S)
         f2 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 28 * S)
         tx = ox + 100 * k + 10 * S
-        d.text((tx, 160 * S), "IndicPhotoOCR", font=f1, fill=NAVY)
+        d.text((tx, 160 * S), title, font=f1, fill=NAVY)
         d.text((tx, 250 * S), "Read text in photos, offline", font=f2, fill="#5D6075")
         d.text((tx, 296 * S), "English + 11 Indian languages", font=f2, fill="#5D6075")
         for i, c in enumerate([ORANGE, BLUE, GREEN]):

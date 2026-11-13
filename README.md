@@ -1,15 +1,46 @@
-# IndicPhotoOCR 2.0: Android app source (version 2.0.0-alpha7.5)
+<p align="center"><img src="store/icon_512.png" width="112" alt="IndicPhotoOCR 2.0 icon"></p>
 
-An offline Android app that reads text in photos in English and 11 Indian languages (Hindi, Bengali, Marathi, Tamil, Telugu, Kannada, Malayalam, Gujarati, Punjabi, Odia, Assamese). Everything runs on the phone with ONNX Runtime; the app has no internet permission.
+<h1 align="center">IndicPhotoOCR 2.0</h1>
 
-This zip has everything needed to change the code and rebuild the app on another machine: the source, the 14 ONNX models, the build scripts, the Play Store graphics and the docs. The APK/AAB are not included (~465 / ~335 MB); build them with the steps below.
+<p align="center">Read text in photos in English and 11 Indian languages, fully offline, on Android.</p>
+
+<p align="center">
+  <a href="https://github.com/Asadalk/IndicPhotoOCR-Android/releases/latest"><img src="https://img.shields.io/github/v/release/Asadalk/IndicPhotoOCR-Android?label=Download%20APK&logo=android&style=for-the-badge" alt="Download the APK" height="40"></a>
+  <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/Asadalk/IndicPhotoOCR-Android"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png" alt="Get it on Obtainium" height="40"></a>
+</p>
+
+IndicPhotoOCR 2.0 finds and reads the text in photos of signboards, shop fronts, notices, labels and pages, in **English, Hindi, Bengali, Marathi, Gujarati, Punjabi, Odia, Assamese, Tamil, Telugu, Kannada and Malayalam**.
+
+- **Offline and private.** Everything runs on the phone. The app has no internet permission: no account, no ads, no tracking, nothing collected ([privacy policy](https://asadalk.github.io/IndicPhotoOCR-Android/privacy.html)).
+- **Simple.** Take a photo, pick one from the gallery, or share an image to the app. Found words are boxed on the photo, and the text can be copied or shared.
+- **Fast where it can be.** Uses the phone's GPU/NPU for detection when that is faster than the CPU.
+
+Created by people at the Vision, Language and Learning Group (VL2G), IIT Jodhpur. Supported by Bhashini.
+
+## Install
+
+| Where | How | Updates |
+|---|---|---|
+| **Google Play** | In closed testing now; the public listing (`com.vl2g.indicphotoocr`) opens after the test. The link will be added here. | automatic |
+| **GitHub Releases** | Download `IndicPhotoOCR-<version>.apk` from the [latest release](https://github.com/Asadalk/IndicPhotoOCR-Android/releases/latest), open it on the phone and allow "Install unknown apps". | manual |
+| **[Obtainium](https://obtainium.imranr.dev)** | Tap the Obtainium badge above on the phone, or in Obtainium add the URL `https://github.com/Asadalk/IndicPhotoOCR-Android`. | from GitHub Releases |
+
+The release APK is the same Google-signed app as on Google Play, so you can switch between Play, GitHub and Obtainium without uninstalling.
+
+**Requirements:** Android 8.0 or newer, a 64-bit ARM phone (almost all phones since 2017), about 500 MB free space; 4 GB RAM or more recommended. The download is large (~335 MB from Play, ~465 MB as one APK) because the 14 recognition models are inside the app; that is what lets it work offline.
+
+**F-Droid:** not available. F-Droid builds every app from source on its own servers, and this app depends on prebuilt ONNX Runtime binaries and ~420 MB of trained models, which do not fit its rules. Obtainium is the open-source alternative.
 
 ---
+
+# For developers
+
+This repository has everything needed to change the code and rebuild the app: the source, the 14 ONNX models, the build scripts, the Play Store graphics and the docs. Licence: **AGPL-3.0** (see `LICENSE`; it is required because the text detector was trained with Ultralytics YOLO). Other components and their licences are listed in the app under *Open-source licences* and in `docs/LICENCE_AUDIT.md`.
 
 ## 1. Quick start (Linux x86_64)
 
 ```bash
-unzip IndicPhotoOCR2-app-source-7.5.zip && cd IndicPhotoOCR2-app
+git clone https://github.com/Asadalk/IndicPhotoOCR-Android.git && cd IndicPhotoOCR-Android
 bash setup_toolchain.sh     # once: JDK 17 + Android SDK 36 + bundletool into ./toolchain (~1.5 GB, needs internet)
 bash build_apk.sh           # Gradle 8.13 is downloaded by the wrapper on first run
 ```
@@ -32,10 +63,10 @@ toolchain/sdk/platform-tools/adb install -r IndicPhotoOCR2.apk
 
 ---
 
-## 2. What is in the zip
+## 2. What is in the repository
 
 ```
-IndicPhotoOCR2-app/
+IndicPhotoOCR-Android/
 ├── README.md                  this file
 ├── setup_toolchain.sh         installs JDK 17 + Android SDK locally (Linux)
 ├── build_apk.sh               builds the .aab (for Play) and one installable test APK
@@ -52,7 +83,7 @@ IndicPhotoOCR2-app/
 │   │       │   ├── InfoActivity.kt   About Us / Terms of Service / Privacy Policy / Open-source licences screens
 │   │       │   ├── ModelStore.kt     loads models straight from the APK; saves the accelerator choice
 │   │       │   └── ReadingOrder.kt   puts recognised words into lines (top-to-bottom, left-to-right)
-│   │       ├── res/                  layouts, strings (all app text), colours, icons, logos
+│   │       ├── res/                  layouts, strings (all app text), colours, icons, app logo
 │   │       ├── assets/licenses/      NOTICE.txt + full licence texts shown in "Open-source licences"
 │   │       └── AndroidManifest.xml
 │   ├── ocrcore/               pure-Kotlin OCR engine shared by the app and :verify
@@ -64,7 +95,8 @@ IndicPhotoOCR2-app/
 ├── store/                     Play Store icon (512×512) and feature graphic (1024×500)
 └── docs/
     ├── PLAY_STORE_GUIDE.md    how to publish on Google Play, costs, checklist
-    ├── LICENCE_AUDIT.md       licences of every model/library, the open issues, and what to do
+    ├── LICENCE_AUDIT.md       licences of every model/library and how each is met
+    ├── privacy.html, index.html  privacy policy page (GitHub Pages)
     └── CHANGELOG.md           what changed in each test build
 ```
 
@@ -123,7 +155,7 @@ Accuracy of this exact pipeline (BSTD, official metric, average of 10 languages,
 
 ## 6. Python tools (`tools/`)
 
-These ran on the lab server (conda env `indicphotoocr`). They need the IndicPhotoOCR repo and the BSTD dataset, which are not in this zip.
+These ran on the lab server (conda env `indicphotoocr`). They need the IndicPhotoOCR repo and the BSTD dataset, which are not in this repository.
 
 | Script | Purpose |
 |---|---|
@@ -145,7 +177,9 @@ This runs the exact app engine on a computer, so its output can be compared word
 
 ## 7. Signing and release
 
-The build is signed with the **debug key** (`signingConfig = debug` in `app/build.gradle.kts`). That is fine for test installs, but **not** for Google Play, and a debug-signed APK cannot update an app signed with another machine's debug key: uninstall the old app first. For Play: create an upload key, add a `signingConfigs.release` block that uses it, and upload `app-release.aab`. Already done for Play: .aab output, models in an install-time asset pack (base ~14 MB, model pack ~335 MB download), targetSdk 36, 16 KB-aligned native libraries. See `docs/PLAY_STORE_GUIDE.md`.
+- **Without a key**, release builds are signed with the debug key. That is fine for testing on your own phone, but such an APK cannot update the official app (different signature): uninstall the official app first.
+- **Official builds** are signed with the upload key, read from `~/.indicphotoocr-signing.properties` (`storeFile`, `storePassword`, `keyAlias`, `keyPassword`; another path can be given in `INDICPHOTOOCR_SIGNING`). The key and its password are never committed. Google Play re-signs the app with its own app-signing key (Play App Signing).
+- **Release steps:** raise `versionCode` and set `versionName` in `app/build.gradle.kts`, run `build_apk.sh`, upload `app-release.aab` to Play. For GitHub, download the *signed, universal APK* of that version from Play Console (App bundle explorer → Downloads) and attach it to a GitHub release named `v<versionName>`, so the GitHub APK has the same signature as the Play app.
 
 ---
 
