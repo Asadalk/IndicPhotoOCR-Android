@@ -24,6 +24,7 @@ Updated 7 Nov 2026 (build 7.5). This is an engineering audit, not legal advice. 
 | 8 | ONNX Runtime 1.22.0 (Android) | **MIT** | **GREEN** | Notice is in the app (7.4). |
 | 9 | AndroidX (core, appcompat, activity, exifinterface), Material Components, Kotlin stdlib | **Apache-2.0** | **GREEN** | Notice is in the app (7.4). |
 | 10 | App icon (from 7.3): letter shapes from the Lohit Devanagari (अ) and DejaVu Sans Bold (A) fonts | SIL OFL 1.1 / Bitstream Vera licence | **GREEN** | Both licences allow use in a logo. No in-app notice needed; this file is the record. |
+| 10b | README wordmark "IndicPhotoOCR 2.0" (`store/logo_indicphotoocr2*.png`, 14 Nov 2026): the original IndicPhotoOCR logo + "2.0" set in Kalam Light | Original logo: IndicPhotoOCR repo, **MIT** (Bhashini Team, IIT Jodhpur). Kalam: **SIL OFL 1.1** | **GREEN** | Both allow this use. The font file is not shipped, only the rendered image. |
 | 11 | Our own app code (Kotlin, tools) | Ours (VL2G, IIT Jodhpur) | — | Release it under **AGPL-3.0** together with the app (simplest way to satisfy item 1). |
 
 **Blocking the release: only item 1 (push the source to the public AGPL repo). Everything else is GREEN.**

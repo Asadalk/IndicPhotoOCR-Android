@@ -1,6 +1,9 @@
-<p align="center"><img src="store/icon_512.png" width="112" alt="IndicPhotoOCR 2.0 icon"></p>
-
-<h1 align="center">IndicPhotoOCR 2.0</h1>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="store/logo_indicphotoocr2_dark.png">
+    <img src="store/logo_indicphotoocr2.png" width="520" alt="IndicPhotoOCR 2.0">
+  </picture>
+</p>
 
 <p align="center">Read text in photos in English and 11 Indian languages, fully offline, on Android.</p>
 
@@ -15,7 +18,7 @@ IndicPhotoOCR 2.0 finds and reads the text in photos of signboards, shop fronts,
 - **Simple.** Take a photo, pick one from the gallery, or share an image to the app. Found words are boxed on the photo, and the text can be copied or shared.
 - **Fast where it can be.** Uses the phone's GPU/NPU for detection when that is faster than the CPU.
 
-Created by people at the Vision, Language and Learning Group (VL2G), IIT Jodhpur. Supported by Bhashini.
+Created by people at the [Vision, Language and Learning Group (VL2G)](https://vl2g.github.io/), [IIT Jodhpur](https://www.iitj.ac.in/). Supported by [Bhashini](https://bhashini.gov.in/). Version 2.0 of [IndicPhotoOCR](https://github.com/Bhashini-IITJ/IndicPhotoOCR).
 
 ## Install
 
@@ -92,7 +95,7 @@ IndicPhotoOCR-Android/
 │   │       └── RgbImage.kt    image resize/crop/normalise helpers (match the Python reference exactly)
 │   └── verify/                runs the same engine on a desktop/server JVM to compare with Python
 ├── tools/                     Python helpers used to make the models and check the app (section 6)
-├── store/                     Play Store icon (512×512) and feature graphic (1024×500)
+├── store/                     Play Store icon (512×512), feature graphic (1024×500), listing text, README wordmark
 └── docs/
     ├── PLAY_STORE_GUIDE.md    how to publish on Google Play, costs, checklist
     ├── LICENCE_AUDIT.md       licences of every model/library and how each is met
@@ -165,6 +168,7 @@ These ran on the lab server (conda env `indicphotoocr`). They need the IndicPhot
 | `reference_pipeline.py`, `reference_pipeline_all.py` | Python copy of the app pipeline; scores BSTD val with the official metric |
 | `dedup_boxes.py` | Python copy of the app's overlap pruning (base rule) |
 | `make_icon.py` | generates the app icon and the Play Store graphics |
+| `make_logo2.py` | makes the "IndicPhotoOCR 2.0" wordmark: the original IndicPhotoOCR logo + "2.0" in Kalam Light (SIL OFL 1.1, Google Fonts) |
 
 ### Checking the Kotlin engine against Python (`:verify`)
 ```bash
