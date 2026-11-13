@@ -19,13 +19,7 @@ IndicPhotoOCR 2.0 finds and reads the text in photos of signboards, shop fronts,
 - **Simple.** Take a photo, pick one from the gallery, or share an image to the app. Found words are boxed on the photo, and the text can be copied or shared.
 - **Fast where it can be.** Uses the phone's GPU/NPU for detection when that is faster than the CPU.
 
-<p align="center">
-  <a href="https://www.iitj.ac.in/"><img src="store/logo_iitj.png" height="84" alt="IIT Jodhpur"></a>
-  &nbsp;&nbsp;
-  <a href="https://bhashini.gov.in/"><img src="store/logo_bhashini.png" height="84" alt="Bhashini"></a>
-</p>
-
-<p align="center">Developed by people at the <a href="https://vl2g.github.io/">Vision, Language and Learning Group (VL2G)</a>, <a href="https://www.iitj.ac.in/">IIT Jodhpur</a>. Supported by <a href="https://bhashini.gov.in/">Bhashini</a>.<br>Version 2.0 of <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR">IndicPhotoOCR</a>.</p>
+Developed by people at [VL2G](https://vl2g.github.io/), [IIT Jodhpur](https://www.iitj.ac.in/). Supported by [Bhashini](https://bhashini.gov.in/).
 
 ## Install
 
@@ -40,6 +34,33 @@ The release APK is the same Google-signed app as on Google Play, so you can swit
 **Requirements:** Android 8.0 or newer, a 64-bit ARM phone (almost all phones since 2017), about 500 MB free space; 4 GB RAM or more recommended. The download is large (~335 MB from Play, ~465 MB as one APK) because the 14 recognition models are inside the app; that is what lets it work offline.
 
 **F-Droid:** not available. F-Droid builds every app from source on its own servers, and this app depends on prebuilt ONNX Runtime binaries and ~420 MB of trained models, which do not fit its rules. Obtainium is the open-source alternative.
+
+## Credits
+
+<table>
+  <tr>
+    <td align="center" width="50%"><b>Developed at</b></td>
+    <td align="center" width="50%"><b>Supported by</b></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://www.iitj.ac.in/"><picture>
+        <source media="(prefers-color-scheme: dark)" srcset="store/logo_iitj_dark.png">
+        <img src="store/logo_iitj.png" height="110" alt="IIT Jodhpur">
+      </picture></a><br>
+      <a href="https://vl2g.github.io/">Vision, Language and Learning Group (VL2G)</a><br>IIT Jodhpur
+    </td>
+    <td align="center">
+      <a href="https://bhashini.gov.in/"><picture>
+        <source media="(prefers-color-scheme: dark)" srcset="store/logo_bhashini_dark.png">
+        <img src="store/logo_bhashini.png" height="110" alt="Bhashini">
+      </picture></a><br>
+      <a href="https://bhashini.gov.in/">Bhashini</a><br>Digital India Bhashini Division, MeitY
+    </td>
+  </tr>
+</table>
+
+IndicPhotoOCR 2.0 builds on [IndicPhotoOCR](https://github.com/Bhashini-IITJ/IndicPhotoOCR) and the Bharat Scene Text Dataset (BSTD) from IIT Jodhpur.
 
 ---
 
