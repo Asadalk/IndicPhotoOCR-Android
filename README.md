@@ -8,8 +8,9 @@
 <p align="center">Read text in photos in English and 11 Indian languages, fully offline, on Android.</p>
 
 <p align="center">
-  <a href="https://github.com/Asadalk/IndicPhotoOCR-Android/releases/latest"><img src="https://img.shields.io/github/v/release/Asadalk/IndicPhotoOCR-Android?label=Download%20APK&logo=android&style=for-the-badge" alt="Download the APK" height="40"></a>
-  <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/Asadalk/IndicPhotoOCR-Android"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png" alt="Get it on Obtainium" height="40"></a>
+  <a href="https://github.com/Asadalk/IndicPhotoOCR-Android/releases/latest"><img src="https://img.shields.io/github/v/release/Asadalk/IndicPhotoOCR-Android?label=Download%20APK&logo=android&logoColor=white&color=3DDC84&style=for-the-badge" alt="Download the APK"></a>
+  <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/Asadalk/IndicPhotoOCR-Android"><img src="https://img.shields.io/badge/Obtainium-Get%20it-6750A4?style=for-the-badge" alt="Get it on Obtainium"></a>
+  <img src="https://img.shields.io/badge/Google%20Play-coming%20soon-414141?style=for-the-badge&logo=googleplay&logoColor=white" alt="Google Play: coming soon">
 </p>
 
 IndicPhotoOCR 2.0 finds and reads the text in photos of signboards, shop fronts, notices, labels and pages, in **English, Hindi, Bengali, Marathi, Gujarati, Punjabi, Odia, Assamese, Tamil, Telugu, Kannada and Malayalam**.
@@ -18,13 +19,19 @@ IndicPhotoOCR 2.0 finds and reads the text in photos of signboards, shop fronts,
 - **Simple.** Take a photo, pick one from the gallery, or share an image to the app. Found words are boxed on the photo, and the text can be copied or shared.
 - **Fast where it can be.** Uses the phone's GPU/NPU for detection when that is faster than the CPU.
 
-Created by people at the [Vision, Language and Learning Group (VL2G)](https://vl2g.github.io/), [IIT Jodhpur](https://www.iitj.ac.in/). Supported by [Bhashini](https://bhashini.gov.in/). Version 2.0 of [IndicPhotoOCR](https://github.com/Bhashini-IITJ/IndicPhotoOCR).
+<p align="center">
+  <a href="https://www.iitj.ac.in/"><img src="store/logo_iitj.png" height="84" alt="IIT Jodhpur"></a>
+  &nbsp;&nbsp;
+  <a href="https://bhashini.gov.in/"><img src="store/logo_bhashini.png" height="84" alt="Bhashini"></a>
+</p>
+
+<p align="center">Developed by people at the <a href="https://vl2g.github.io/">Vision, Language and Learning Group (VL2G)</a>, <a href="https://www.iitj.ac.in/">IIT Jodhpur</a>. Supported by <a href="https://bhashini.gov.in/">Bhashini</a>.<br>Version 2.0 of <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR">IndicPhotoOCR</a>.</p>
 
 ## Install
 
 | Where | How | Updates |
 |---|---|---|
-| **Google Play** | In closed testing now; the public listing (`com.vl2g.indicphotoocr`) opens after the test. The link will be added here. | automatic |
+| **Google Play** | Coming soon: in closed testing now; the public listing (`com.vl2g.indicphotoocr`) opens after the test. The link will be added here. | automatic |
 | **GitHub Releases** | Download `IndicPhotoOCR-<version>.apk` from the [latest release](https://github.com/Asadalk/IndicPhotoOCR-Android/releases/latest), open it on the phone and allow "Install unknown apps". | manual |
 | **[Obtainium](https://obtainium.imranr.dev)** | Tap the Obtainium badge above on the phone, or in Obtainium add the URL `https://github.com/Asadalk/IndicPhotoOCR-Android`. | from GitHub Releases |
 

@@ -30,7 +30,7 @@ Simple to use
 Open source
 IndicPhotoOCR 2.0 is free software under the AGPL-3.0 licence. Source code: https://github.com/Asadalk/IndicPhotoOCR-Android
 
-Created by people at the Vision, Language and Learning Group (VL2G), IIT Jodhpur. Supported by Bhashini.
+Developed by people at the Vision, Language and Learning Group (VL2G), IIT Jodhpur. Supported by Bhashini.
 
 Note: recognition can be wrong for very small, blurred, curved, handwritten or decorative text. Please check important text yourself.
 ----------------------------------------------------------------
