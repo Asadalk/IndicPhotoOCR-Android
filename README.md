@@ -66,6 +66,8 @@ IndicPhotoOCR 2.0 builds on [IndicPhotoOCR](https://github.com/Bhashini-IITJ/Ind
 
 # For developers
 
+> **The official source code is now the [`android` branch of Bhashini-IITJ/IndicPhotoOCR](https://github.com/Bhashini-IITJ/IndicPhotoOCR/tree/android)** (from 14 Nov 2026). Send changes and issues there. This repository keeps the 2.0.0 source (with the models), the APK releases used by Obtainium, and the [privacy policy page](https://asadalk.github.io/IndicPhotoOCR-Android/privacy.html).
+
 This repository has everything needed to change the code and rebuild the app: the source, the 14 ONNX models, the build scripts, the Play Store graphics and the docs. Licence: **AGPL-3.0** (see `LICENSE`; it is required because the text detector was trained with Ultralytics YOLO). Other components and their licences are listed in the app under *Open-source licences* and in `docs/LICENCE_AUDIT.md`.
 
 ## 1. Quick start (Linux x86_64)

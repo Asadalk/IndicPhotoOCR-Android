@@ -28,7 +28,7 @@ Simple to use
 • Automatically uses the fastest processor on your phone (CPU, GPU or NPU).
 
 Open source
-IndicPhotoOCR 2.0 is free software under the AGPL-3.0 licence. Source code: https://github.com/Asadalk/IndicPhotoOCR-Android
+IndicPhotoOCR 2.0 is free software under the AGPL-3.0 licence. Source code: https://github.com/Bhashini-IITJ/IndicPhotoOCR/tree/android
 
 Developed by people at the Vision, Language and Learning Group (VL2G), IIT Jodhpur. Supported by Bhashini.
 
@@ -55,11 +55,12 @@ STORE SETTINGS (Grow users → Store presence → Store settings)
 App or game ........... App
 Category .............. Tools
 Email (public) ........ the email you want shown on the store
-Website (optional) .... https://github.com/Asadalk/IndicPhotoOCR-Android
+Website (optional) .... https://github.com/Bhashini-IITJ/IndicPhotoOCR/tree/android
 Phone (optional) ...... leave empty
 
 ================================================================
 LINKS
 ================================================================
 Privacy policy ........ https://asadalk.github.io/IndicPhotoOCR-Android/privacy.html
-Source code ........... https://github.com/Asadalk/IndicPhotoOCR-Android
+Source code ........... https://github.com/Bhashini-IITJ/IndicPhotoOCR/tree/android
+APK releases .......... https://github.com/Asadalk/IndicPhotoOCR-Android/releases

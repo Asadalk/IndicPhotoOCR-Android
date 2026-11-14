@@ -38,10 +38,10 @@ What a personal account means:
 - **Terms of Service, Privacy Policy and Open-source licences** screens with real text.
 - **App ID (permanent): `com.vl2g.indicphotoocr`** (sir, 9 Nov 2026; replaces 7.5's `io.github.asadalk.indicphotoocr`). Each ID change installs as a new app next to older test builds; uninstall those. Never change it after the first Play upload.
 - **No logos**; credit line "Created at VL2G, IIT Jodhpur · Supported by Bhashini" (7.5).
-- **Source link** in the app: `https://github.com/Asadalk/IndicPhotoOCR-Android`.
+- **Source link** in the app: 2.0.0 → `https://github.com/Asadalk/IndicPhotoOCR-Android`; next build → `https://github.com/Bhashini-IITJ/IndicPhotoOCR/tree/android` (official source from 14 Nov 2026).
 
 **Still to do:**
-1. ~~Push the source~~: done, public at `https://github.com/Asadalk/IndicPhotoOCR-Android`. Push each new release's source there too.
+1. ~~Push the source~~: done. Official: `android` branch of Bhashini-IITJ/IndicPhotoOCR (models as release asset `android-v<version>`); APK releases: Asadalk/IndicPhotoOCR-Android. Push each new release's source to the branch.
 2. **Upload key + Play App Signing.** Make the key on the machine that will do releases:
    `keytool -genkeypair -v -keystore upload.jks -keyalg RSA -keysize 4096 -validity 10000 -alias upload`
    - Keep `upload.jks` and its password safe, never commit them, and keep a backup.
